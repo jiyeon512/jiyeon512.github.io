@@ -3,6 +3,7 @@ layout: post
 title:  "selection sort!"
 ---
 
+
 #선택 정렬
 
 1. 선택 정렬 알고리즘 동작 방법
@@ -14,6 +15,7 @@ title:  "selection sort!"
 처음에는 두 개의 리스트로 나누어 설명했지만 실제로 선택 정렬을 구현하기 위해 두 개의 배열을 사용할 필요는 없다. 아래 그림과 같이 정렬이 안 된 리스트에서 최솟값이 선택되면 이 값을 배열의 첫번째 요소와 교환한다. 이렇게 입력 배열 이외에 다른 추가 메모리를 요구하지 않는 정렬 방법을 제자리 정렬(in-place sorting)이라고 한다. 최솟값 1과 첫 번째 요소 5를 교환하면 전체 배열은 정렬된 부분과 되지 않은 부분으로 나뉜다. 다음에는 두 번째 요소부터 나머지 요소들 중에서 가장 작은 값을 선택하고 이를 두 번째 요소와 교환한다. 이 절차를 (숫자 개수 -1)만큼 되풀이하면 추가적인 배열을 사용하지 않고서도 전체 숫자들이 정렬된다.
 
 ![image](https://user-images.githubusercontent.com/101514626/166664495-9f492420-199f-49b4-954f-dd6b406ff819.png)
+
 
 
 2. 선택 정렬 알고리즘 구현
@@ -83,6 +85,7 @@ void selectionSort(int a[], int n[])
 
   }
 
+
   
 3. 선택 정렬의 시간 복잡도 분석
  
@@ -100,6 +103,7 @@ void selectionSort(int a[], int n[])
 
   
   
+  
 4. 시간 복잡도(Time Complexity) 및 공간 복잡도(Space Complexity)
   
  알고리즘을 평가할 때는 시간 복작도와 공간 복잡도를 사용합니다.
@@ -108,6 +112,8 @@ void selectionSort(int a[], int n[])
   - 공간 복잡도: 알고리즘 수행에 필요한 메모리 양을 평가
   
   시간 복잡도와 공간 복잡도는 주로 점근적 표기법 중 빅오 표기법을 이용하여 나타냅니다. (최악의 경우에도 해당 알고리즘이 어떤 성능을 낼지 가늠해볼 수 있기 때문입니다.)
+  
+  
   
   ▪ 시간 복잡도 (Time Complexity)
  
@@ -141,6 +147,7 @@ void selectionSort(int a[], int n[])
   
   
  -> 평균적인 경우를 가장 많이 사용할 것 같지만 알고리즘이 복잡해지수록 평균적인 경우는 구하기가 매우 어려워 지기 때문에 최악의 경우로 알고리즘의 성능을 파악합니다.
+  
   
   
   ▪ 시간 복잡도 계산
@@ -197,6 +204,8 @@ void selectionSort(int a[], int n[])
   
   T(n) = O(1)
   
+  
+  
   • O(logN) - 로그 시간(Logarithmic time)
   
   입력 크기(N)가 커질 때 연산 횟수가 logN에 비례해서 증가하면 시간 복잡도는 O(logN)입니다.
@@ -213,6 +222,8 @@ void selectionSort(int a[], int n[])
         
   시간 복잡도 : T(n) = logN
     
+  
+                    
   • O(n) - 선형 시간 (Linear time)
                     
   입력 크기(n)가 커질 때 연산 횟수가 n에 비례해서 증가하면 시간 복잡도는 O(n)입니다.
@@ -231,6 +242,8 @@ void selectionSort(int a[], int n[])
   
   T(n) = O(n)
   
+  
+  
  • O(n²) - 2차 시간 (Quadratic time)
   
   입력 크기(n)가 커질 때 연산 횟수가 n²에 비례해서 증가하면 시간 복잡도는 O(n²)입니다.
@@ -246,6 +259,7 @@ void selectionSort(int a[], int n[])
   위 알고리즘은 for문이 중첩되어 있기 때문에 n²에 비례해서 연산수가 증가합니다.
   
   시간 복잡도 : T(n) = O(n²)
+  
   
   
   • O(2^n) - 지수 시간(Exponential time)
@@ -268,6 +282,7 @@ void selectionSort(int a[], int n[])
 한번 함수를 호출할 때마다 두 번씩 재귀로 함수를 호출하기 때문에 2^n에 비례해서 연산수가 증가합니다.
           
 시간 복잡도: T(n) = O(2^n)
+          
        
           
 ![image](https://user-images.githubusercontent.com/101514626/166675763-18db6f7d-cbf6-46d4-85d1-e16097cfae77.png)
